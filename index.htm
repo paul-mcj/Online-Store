@@ -1,0 +1,257 @@
+<!--
+  -- Student Name: Paul McJannet
+  -- Student ID: 41171723
+  -- Course: CST8117 - Cross-Platform Web Design
+  -- Semester: Fall 2024
+  -- Assignment: 4 - Online Store
+  -- Date Submitted: Nov 24, 2024
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Magic: the Gathering Store</title>
+		<!-- meta data -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="keywords"
+			content="cards, magic, gathering, sleeves, dice, decks, boxes" />
+		<meta
+			name="language"
+			content="en" />
+		<!-- jQuery CDN comes from the following url: https://cdnjs.com/libraries/jquery -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- Bootstrap CSS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous" />
+		<!-- Bootstrap JS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+		<!-- Font Awesome Solid + Brands downloaded from the following url: https://docs.fontawesome.com/web/setup/host-yourself/webfonts-->
+		<link
+			href="./assets/css/fontawesome.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/brands.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/solid.css"
+			rel="stylesheet" />
+		<!-- Local CSS stylesheets -->
+		<link
+			rel="stylesheet"
+			href="assets/main.css" />
+		<link
+			rel="stylesheet"
+			href="assets/products.css" />
+	</head>
+	<body>
+		<!-- Skip to main content for accessibility -->
+		<a
+			href="#main"
+			class="skip"
+			>Skip to main content</a
+		>
+		<header>
+			<section>
+				<h1>
+					<a href="./index.htm"
+						>The Magic: the Gathering Store</a
+					>
+				</h1>
+				<address>mcja0008@algonquinlive.com</address>
+			</section>
+			<!-- START: Navigation menu-->
+			<nav>
+				<ul class="navbar">
+					<div id="navbar-close">
+						<i class="fa-solid fa-rectangle-xmark"></i>
+					</div>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+					<li>
+						<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+						<form
+							action=""
+							class="input-group">
+							<input
+								type="search"
+								id="search"
+								class="form-control input-action"
+								placeholder="search..." />
+							<div class="input-group-prepend">
+								<label
+									hidden
+									for="search"
+									>Search
+								</label>
+								<button
+									title="Search"
+									class="input-action-button"
+									type="submit">
+									<i
+										class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</form>
+					</li>
+				</ul>
+				<div id="hamburger">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+			</nav>
+			<!-- END: Navigation menu-->
+		</header>
+		<main id="main">
+			<hgroup>
+				<h2 class="middle-heading">
+					Want to sell your old cards and get some cash?
+					<!-- This content changes depending on if desktop or mobile/landscape -->
+					<div class="desktop-heading">
+						<em>We have a buylist!</em>
+					</div>
+					<div class="mobile-cta">
+						<a href="./contact-us.htm"
+							>Get in Touch With Us!</a
+						>
+					</div>
+				</h2>
+				<h2 class="middle-heading">
+					Missing that one last card for your deck?
+					<!-- This content changes depending on if desktop or mobile/landscape -->
+					<div class="desktop-heading">
+						<em>We sell cards!</em>
+					</div>
+					<div class="mobile-cta">
+						<a href="./products.htm">View Our Products!</a>
+					</div>
+				</h2>
+				<h2 class="middle-heading last-heading">
+					Card Gaming Accessories
+				</h2>
+				<div class="grouped-products">
+					<h3><i class="fa-solid fa-box"></i> Deck Boxes</h3>
+					<h3><i class="fa-solid fa-book-open"></i> Binders</h3>
+					<h3><i class="fa-solid fa-coins"></i> Counters</h3>
+					<h3><i class="fa-solid fa-dice"></i> Dice</h3>
+					<h3>
+						<i class="fa-solid fa-shield-halved"></i> Sleeves
+					</h3>
+					<h3><i class="fa-solid fa-rug"></i> Playmats</h3>
+				</div>
+			</hgroup>
+			<!-- START: Content; this is where most explanation text on the main page will be-->
+			<section class="content store-content">
+				<h2>Our Store</h2>
+				<p>
+					The Magic: the Gathering Store has all your card gaming
+					needs! Check out the official
+					<a
+						href="https://magic.wizards.com/en"
+						target="_blank"
+						>Magic: the Gathering</a
+					>
+					site for more details on upcoming news, tournaments,
+					and more!
+				</p>
+				<figure>
+					<img
+						title="Magic: the Gathering players in a game"
+						src="./images/Magic_The_Gathering_players.jpg"
+						alt="two players playing magic the gathering, we are able to see a behind the shoulder view of a player's hand" />
+					<figcaption class="mini-text">
+						<em
+							>Players at our location in a competitive
+							match.</em
+						>
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Magic_The_Gathering_players.JPG"
+							target="_blank"
+							>Photo by Airman 1st Class Kyle Gese</a
+						>.
+					</figcaption>
+				</figure>
+			</section>
+			<section class="content">
+				<h2>Our Newest Products</h2>
+				<p>
+					We always have new products available! Check back
+					often, or subscribe to our newsletter to stay
+					up-to-date on all things Magic: the Gathering!
+				</p>
+				<div class="our-newest-products">
+					<!-- This project incorporates the Gestalt design principle of continuity, which is seen in this part of the website. There are three cards that are side-by-side on a straight line, implying that they share a similar relationship (which they do, as they are all newly available products). -->
+					<div class="card">
+						<img
+							title="new 6-sided mini dice"
+							src="./images/pexels-pixabay-37534.jpg"
+							alt="several white colored mini 6-sided dice" />
+						<p class="card-title">Mini Dice</p>
+						<p class="mini-text">$3.99 (6 pk)</p>
+					</div>
+					<div class="card">
+						<img
+							title="new thick 100 page binder"
+							src="./images/office-933306_1280.jpg"
+							alt="a purple, orange and red binder on a wooden shelf" />
+						<p class="card-title">100 Page Binders</p>
+						<p class="mini-text">$15.50</p>
+					</div>
+					<div class="card">
+						<img
+							title="we always have new stock of dollar rares"
+							src="./images/wayne-low-OvN4OkhkTLo-unsplash.jpg"
+							alt="a teenager holding a Magic: the Gathering card in front of his face" />
+						<p class="card-title">Dollar Rares</p>
+						<p class="mini-text">$0.99</p>
+					</div>
+				</div>
+			</section>
+			<!-- END: Navigation menu-->
+			<!-- Back to top button -->
+			<a
+				class="back-to-top"
+				href="#">
+				<i class="fa-solid fa-arrow-up"></i>
+			</a>
+		</main>
+		<!-- START: Footer; more links will be displayed for extra site navigation-->
+		<footer>
+			<div>
+				<ul>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div>
+				<p class="mini-text">&copy;Paul McJannet | 2024</p>
+			</div>
+		</footer>
+		<!-- END: Footer -->
+		<!-- Need to include this script for hamburger button to work properly and show nav menu for mobile devices -->
+		<script src="./assets/hamburger.js"></script>
+	</body>
+</html>

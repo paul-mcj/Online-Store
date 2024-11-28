@@ -1,0 +1,48 @@
+﻿Assignment # 1:
+
+
+References
+
+Coyier, C. (2024, August 12). CSS-Tricks. A complete guide to Flexbox. CSS-Tricks. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+Educative. (n.d.). What are the height and width attributes in HTML? Educative. https://www.educative.io/answers/what-are-the-height-width-attributes-in-html
+
+
+Gliffy. (2017, November 22). How to Create a Site Map: Your Guide to Visual Site Maps. Gliffy Blog. https://www.gliffy.com/blog/how-to-create-a-sitemap
+
+
+Sublime HQ Pty Ltd. (n.d.). Sublime Text. https://www.sublimetext.com
+
+
+W3Schools. (n.d.). HTML entities. W3Schools. https://www.w3schools.com/html/html_entities.asp
+
+
+W3Schools. (n.d.). How to create a product card. W3Schools. https://www.w3schools.com/howto/howto_css_product_card.asp
+
+
+W3Schools. (n.d.). HTML doctype. W3Schools. https://www.w3schools.com/tags/tag_doctype.asp
+
+
+W3Schools. (n.d.). HTML meta tags. W3Schools. https://www.w3schools.com/tags/tag_meta.asp#gsc.tab=0
+
+
+W3Schools. (n.d.). HTML address tag. W3Schools. https://www.w3schools.com/tags/tag_address.asp
+
+
+
+
+
+
+Images
+
+Are, A. (n.d.). Purple dices with different geometrical shape on a white surface [Photograph]. Pexels. https://www.pexels.com/photo/purple-dices-with-different-geometrical-shape-on-a-white-surface-3649115/
+
+
+Danilyuk, P. (2022). Colorful cards and dice [Photograph]. Pexels. https://www.pexels.com/photo/colorful-cards-and-dice-8111264/
+
+
+Low, W. (n.d.). Boy holding Magic: The Gathering trading card [Photograph]. Unsplash. https://unsplash.com/photos/boy-holding-magic-the-gathering-trading-card-OvN4OkhkTLo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
+
+
+Sannikova, D. (n.d.). Book store interior [Photograph]. Pexels. https://www.pexels.com/photo/book-store-interior-2422442/

@@ -1,0 +1,287 @@
+<!--
+  -- Student Name: Paul McJannet
+  -- Student ID: 41171723
+  -- Course: CST8117 - Cross-Platform Web Design
+  -- Semester: Fall 2024
+  -- Assignment: 4 - Online Store
+  -- Date Submitted: Nov 24, 2024
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Us</title>
+		<!-- meta data -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="language"
+			content="en" />
+		<!-- jQuery CDN comes from the following url: https://cdnjs.com/libraries/jquery -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- Bootstrap CSS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous" />
+		<!-- Bootstrap JS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+		<!-- Font Awesome Solid + Brands downloaded from the following url: https://docs.fontawesome.com/web/setup/host-yourself/webfonts-->
+		<link
+			href="./assets/css/fontawesome.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/brands.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/solid.css"
+			rel="stylesheet" />
+		<!-- Local CSS stylesheets -->
+		<link
+			rel="stylesheet"
+			href="assets/products.css" />
+		<link
+			rel="stylesheet"
+			href="assets/main.css" />
+	</head>
+	<body>
+		<!-- Skip to main content for accessibility -->
+		<a
+			href="#main"
+			class="skip"
+			>Skip to main content</a
+		>
+		<header>
+			<section>
+				<h1>
+					<a href="./index.htm"
+						>The Magic: the Gathering Store</a
+					>
+				</h1>
+				<address>mcja0008@algonquinlive.com</address>
+			</section>
+			<!-- START: Navigation menu-->
+			<nav>
+				<ul class="navbar">
+					<div id="navbar-close">
+						<i class="fa-solid fa-rectangle-xmark"></i>
+					</div>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+					<li>
+						<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+						<form
+							action=""
+							class="input-group">
+							<input
+								type="search"
+								id="search"
+								class="form-control input-action"
+								placeholder="search..." />
+							<div class="input-group-prepend">
+								<label
+									hidden
+									for="search"
+									>Search
+								</label>
+								<button
+									title="Search"
+									class="input-action-button"
+									type="submit">
+									<i
+										class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</form>
+						</form>
+					</li>
+				</ul>
+				<div id="hamburger">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+			</nav>
+			<!-- END: Navigation menu-->
+		</header>
+		<main id="main">
+			<section class="content first-content-section contact-container">
+				<h2 class="last-heading">Contact Us</h2>
+				<p class="contact-page-text">
+					Questions? Comments? Concerns? Let us know your
+					thoughts and we'll be happy to get back to you!
+				</p>
+				<!-- This form just has some basic input fields for now with corresponding labels -->
+				<form
+					action=""
+					class="contact-form"
+					id="contact-us-form">
+					<div class="contact-form-flex">
+						<div>
+							<i class="fa-solid fa-user"></i>
+							<label for="contact-full-name" class="required-input">
+								&nbsp;Full Name</label>
+						</div>
+						<input
+							placeholder="Full Name"
+							class="form-control"
+							maxlength="100"
+							required	
+							aria-required="true"
+							type="text"
+							id="contact-full-name" />
+					</div>
+					<div class="contact-form-flex">
+						<div>
+							<i class="fa-solid fa-phone"></i>
+							<label for="contact-phone">&nbsp;Phone</label>
+						</div>
+						<input
+							placeholder="1234567890"
+							class="form-control"
+							minlength="10"
+							maxlength="10"
+							type="tel"
+							id="contact-phone" />
+					</div>
+					<div class="contact-form-flex">
+						<div>
+							<i class="fa-solid fa-envelope"></i>
+							<label for="contact-email">&nbsp;Email</label>
+						</div>
+						<input
+							placeholder="example@domain.com"
+							class="form-control"
+							type="email"
+							id="contact-email" />
+					</div>
+					<div class="contact-form-flex">
+						<div>
+							<i class="fa-solid fa-rotate-right"></i>
+							<label for="contact-email-reenter"
+							>&nbsp;Re-enter Email</label>
+						</div>
+						<input
+							placeholder="example@domain.com"
+							class="form-control"
+							type="email"
+							id="contact-email-reenter" />
+					</div>
+					<div class="contact-form-flex">
+						<div>
+							<i class="fa-solid fa-calendar"></i>
+							<label for="contact-birth" class="required-input"
+							>&nbsp;Date of Birth</label>
+						</div>
+						<input
+							class="form-control text-muted"
+							required
+							aria-required="true"
+							type="date"
+							id="contact-birth" />
+					</div>
+					<div class="contact-form-flex">
+						<div>
+							<i class="fa-solid fa-hand"></i>
+							<label for="contact-email-reason"
+							>&nbsp;Reason for Contacting Us</label>
+						</div>
+						<select id="contact-email-reason" name="contact-email-reason" class="text-muted form-control">
+							<optgroup label="General Enquiry">
+								<option label="General Enquiry">General Enquiry</option>
+							</optgroup>
+							<optgroup label="Magic: the Gathering Cards">
+								<option value="buy">I want to order cards</option>
+								<option value="sell">I want to sell my cards</option>
+							</optgroup>
+							<optgroup label="Orders">
+								<option value="missing">My order hasn't been delivered yet</option>
+								<option value="damaged">I received a damaged product</option>
+								<option value="shipping">Question about shipping</option>
+							</optgroup>
+							<optgroup label="Events">
+								<option value="reserve">I want to reserve</option>
+								<option value="event-calendar">Upcoming local events</option>
+								<option value="tournaments">Upcoming tournaments</option>
+								<option value="pre-release">Upcoming pre-releases</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="contact-form-comments">
+						<div class="">
+							<i class="fa-solid fa-message"></i>
+							<label for="contact-comments" class="required-input"
+							>&nbsp;Comments</label
+							>
+						</div>
+						<textarea
+							form="contact-us-form"
+							rows="8"
+							required
+							minlength="3"
+							aria-required="true"
+							name="contact-comments"
+							class="form-control contact-border-comments"
+							placeholder="What's on your mind?"
+							id="contact-comments" /></textarea>
+					</div>
+					<div class="contact-form-consent">
+						<input type="checkbox" id="contact-consent" name="checkbox" class="form-check-input" required/>
+						<label id="contact-consent-label" for="contact-consent" class="form-check-label consent-checkbox"><a href="./terms.htm" target="_blank" class="show-terms">I agree to Terms & Conditions</a>
+						<p class="hide-terms">I agree to Terms & Conditions</p></label>
+					</div>
+					<button
+						title="Send Message"
+						type="submit"
+						id="contact-submit"
+						class="contact-submit">
+						<i class="fa-solid fa-paper-plane"></i> Send
+						Message
+					</button>
+				</form>
+			</section>
+			<!-- Back to top button -->
+			<a
+				class="back-to-top"
+				href="#">
+				<i class="fa-solid fa-arrow-up"></i>
+			</a>
+		</main>
+		<!-- START: Footer; more links will be displayed for extra site navigation-->
+		<footer>
+			<div>
+				<ul>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div>
+				<p class="mini-text">&copy;Paul McJannet | 2024</p>
+			</div>
+		</footer>
+		<!-- END: Footer -->
+		<!-- Need to include this script for hamburger button to work properly and show nav menu for mobile devices -->
+		<script src="./assets/hamburger.js"></script>
+		<!-- Need to include this script for client side validation -->
+		<script src="./assets/main.js"></script>
+	</body>
+</html>

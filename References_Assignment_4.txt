@@ -1,0 +1,19 @@
+Assignment # 4 - References
+
+
+Hazeez, H. (2021, September 21). CSS-Tricks. 7 Practical Uses for the ::before and ::after Pseudo-Elements in CSS. https://css-tricks.com/7-practical-uses-for-the-before-and-after-pseudo-elements-in-css/
+
+
+MDN Web Docs. (2024, Oct 22). animation. MDN. https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+
+MDN Web Docs. (2024, Nov 1). <textarea>: The Textarea element. MDN. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
+
+
+Microsoft. (2024). *Visual Studio Code* (Version 1.94.2) [Computer software]. https://code.visualstudio.com/
+
+
+Tech on the Net. (n.d.). HTML: <optgroup> tag. Tech on the Net. https://www.techonthenet.com/html/elements/optgroup_tag.php
+
+
+W3Schools. (n.d.). HTML DOM Events. W3Schools. https://www.w3schools.com/jsref/dom_obj_event.asp

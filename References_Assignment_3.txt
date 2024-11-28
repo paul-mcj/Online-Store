@@ -1,0 +1,20 @@
+Assignment # 3 - References
+
+
+geeksforgeeks. (Last updated: 2024, October 7). How to Calculate the Number of Days between Two Dates in JavaScript? [source code]. geeksforgeeks. https://www.geeksforgeeks.org/how-to-calculate-the-number-of-days-between-two-dates-in-javascript/
+
+
+keycdn. (Last updated: 2023, May 7). Ultimate Regex Cheat Sheet. keycdn. https://www.keycdn.com/support/regex-cheat-Sheet
+
+
+MDN Web Docs. (2024, July 26). orientation. MDN. https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation
+
+
+Microsoft. (2024). *Visual Studio Code* (Version 1.94.2) [Computer software]. https://code.visualstudio.com/
+
+
+w3c. (Last updated: 2024, January 24). Media Queries Level 4. w3c. https://drafts.csswg.org/mediaqueries/#media-types
+
+
+w3resource. (Last updated: 2022, August 19). JavaScript: HTML Form - email validation [source code]. w3resource. https://www.w3resource.com/javascript/form/email-validation.php
+

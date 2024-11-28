@@ -1,0 +1,1233 @@
+/*
+ * Student Name: Paul McJannet
+ * Student ID: 41171723
+ * Course: CST8117 - Cross-Platform Web Design
+ * Semester: Fall 2024
+ * Assignment: 4 - Online Store
+ * Date Submitted: Nov 24, 2024
+ */
+
+/* I have used a triadic colour pallette for my web site. My dominant colour is #5454b2, and my two other colours (which will be used mostly for accents or to grab the user's attention) are #b25454, and #54b254. I chose this main colour because purple is associated with imagination and creativity (London Image Institute, n.d., para. 31) which thematically fits with Magic: the Gathering card game. */
+
+/* These two imports use Google Font API, and have been embedded from the following url: https://fonts.googleapis.com. Importing these in the main.css is much more efficient than using <link> tags in every html file in the project. */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Regarding project media queries, I have decided to check for mobile devices at a breakpoint of max-width: 390px as this is the breakpoint for an iPhone 13 (which is a common enough model of phone user's might have). Additionally, I am making landscape orientation breakpoint of max-width: 844px for the same reason.*/
+
+/* Tag Selectors: all styles below are applied on a direct element basis and might also give children specific inherited properties*/
+
+* {
+	/* defaults for everything */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* defaults for entire html document */
+	color: #fff;
+	font-family: "Quicksand", sans-serif;
+	/* all specified font-sizes will always refer to rem, so default is declared here */
+	font-size: 16px;
+}
+
+header {
+	background: linear-gradient(to top, #191935, #5454b2);
+	padding: 2rem;
+}
+
+main {
+	background: #222;
+	height: 100%;
+	padding: 6rem;
+	text-align: center;
+}
+
+/* reset padding for main element on mobile */
+@media (max-width: 390px) {
+	main {
+		padding: 1.75rem;
+	}
+}
+
+/* adjusts padding for main element on landscape orientation */
+@media (max-width: 844px) and (orientation: landscape) {
+	main {
+		padding: 2rem;
+	}
+}
+
+body {
+	color: #fff;
+	/* The main CSS layout of this website uses grid, as I think its the best way to consistently present html elements especially for different pages. There are several different flexboxes and grids used as well to structure pages further. */
+	display: grid;
+	/* one grid track to separate content between each element: header, main and footer */
+	font-family: "Quicksand", sans-serif;
+	grid-template-rows: 3;
+}
+
+@media (max-width: 390px) {
+	body {
+		width: 100%;
+	}
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	body {
+		width: 100%;
+	}
+}
+
+footer {
+	/* this is a darker shade of the primary colour */
+	background-color: #191935;
+	text-align: center;
+}
+
+footer li {
+	padding-top: 1em;
+}
+
+nav {
+	font-family: "Quicksand", sans-serif;
+	padding-top: 2rem;
+}
+
+/* I want to adjust the padding of the navbar so it looks more uniform on mobile */
+@media (max-width: 390px) {
+	nav {
+		padding-top: 1rem;
+	}
+}
+
+/* slight changes to padding on navbar when landscape as well */
+@media (max-width: 844px) and (orientation: landscape) {
+	nav {
+		padding-top: 1.5rem;
+	}
+}
+
+hgroup {
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+/* make changes to font size of h1 on mobile */
+@media (max-width: 390px) {
+	h1 {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+}
+
+/* smaller font for landscape screens compared to default */
+@media (max-width: 844px) and (orientation: landscape) {
+	h1 {
+		font-size: 3rem;
+	}
+}
+
+/* clicking the h1 will always link to the home page. This is common UI navigation. */
+h1 a {
+	/* !important to override some Bootstrap defaults */
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+h2 {
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+/* reset element style and margin to override bootstrap */
+hr {
+	background-color: #fff;
+	margin: 0;
+}
+
+/* make changes to font size of h2 on mobile */
+@media (max-width: 390px) {
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+/* make changes to font size of h2 on landscape mode */
+@media (max-width: 844px) and (orientation: landscape) {
+	h2 {
+		font-size: 2.25rem;
+	}
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+/* make changes to font size of h3 on mobile */
+@media (max-width: 390px) {
+	h3 {
+		font-size: 1rem;
+	}
+}
+
+/* make changes to font size of h3 on landscape mode */
+@media (max-width: 844px) and (orientation: landscape) {
+	h3 {
+		font-size: 1.25rem;
+	}
+}
+
+img {
+	/* this border is just for aesthetics across the website */
+	border-radius: 5rem 1rem 5rem 1rem;
+	/* these will allow all images to scale and fit within their parent container*/
+	height: auto;
+	max-width: 100%;
+}
+
+/* change all images border radius on mobile so its less rounded on top-left and bottom-right. 5rem is too overwhelming to keep on smaller sizes. */
+@media (max-width: 390px) {
+	img {
+		border-radius: 3rem 1rem 3rem 1rem;
+		max-width: 80%;
+	}
+}
+
+/* want to change the max-width slightly on landscape orientation */
+@media (max-width: 844px) and (orientation: landscape) {
+	img {
+		max-width: 80%;
+	}
+}
+
+button {
+	background-color: #b25454;
+	border-radius: 0.5rem;
+	border-style: none;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	padding: 0.5rem;
+}
+
+button:hover {
+	/* change coloring and cursor style when buttons are hovered for better UI */
+	background-color: #7c3a3a;
+	cursor: pointer;
+}
+
+ul * {
+	color: #fff;
+	list-style: none;
+	text-decoration: none !important;
+}
+
+li > a:hover {
+	color: #b25454;
+}
+
+/* Classes */
+
+.navbar {
+	align-items: center;
+	display: flex;
+	font-size: 1.25rem;
+	justify-content: space-evenly;
+	margin-bottom: 0;
+	/* having this position will allow me to change position: absolute for close button later */
+	position: relative;
+}
+
+/* navbar is hidden on mobile display (JavaScript functionality will show it if hamburger icon is clicked) */
+@media (max-width: 390px) {
+	.navbar {
+		display: none;
+	}
+}
+
+/* navbar is hidden on landscape, too (JavaScript functionality will show it if hamburger icon is clicked) */
+@media (max-width: 844px) and (orientation: landscape) {
+	.navbar {
+		display: none;
+	}
+}
+
+/* display hidden for hamburger button by default used only on mobile */
+#hamburger {
+	display: none;
+}
+
+/* display hidden for close button by default used only on mobile */
+#navbar-close {
+	display: none;
+}
+
+/* hamburger button and shows on mobile with special id to be targeted in JavaScript */
+@media (max-width: 390px) {
+	#hamburger {
+		display: block;
+		font-size: 2rem;
+	}
+
+	/* once the navbar is opened up taking place of the hamburger button, this close button should appear */
+	#navbar-close {
+		display: block;
+		font-size: 2rem;
+	}
+}
+
+/* hamburger button shows on mobile with special id to be targeted in JavaScript */
+@media (max-width: 844px) and (orientation: landscape) {
+	#hamburger {
+		display: block;
+		font-size: 2rem;
+	}
+
+	/* once the navbar is opened up taking place of the hamburger button, this close button should appear */
+	#navbar-close {
+		display: block;
+		font-size: 2rem;
+	}
+}
+
+/* this class is applied when javascript handler modifies the mobile navbar to open. It will be fixed so the user will always have it open no matter where they scroll on mobile, until they close it with the X button */
+.navbar-mobile {
+	align-items: start;
+	animation-name: "openNavbar";
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	background: linear-gradient(to bottom, #191935, #5454b2);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	left: 0;
+	padding: 2rem;
+	position: fixed;
+	top: 0;
+	/* needs to always sit on top of everything else */
+	z-index: 100;
+}
+
+/* these classes are applied when orientation is landscape, as it needs to adjust navbar items to have more space in between for better UI, force direction to be horizontal (not vertical) and also limit the width of the searchbar so its not too long*/
+@media (max-width: 844px) and (orientation: landscape) {
+	.navbar-mobile {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 3rem;
+		gap: 2rem;
+	}
+
+	.navbar-mobile li {
+		flex: 1 1 calc(25%);
+	}
+
+	.navbar-mobile li:last-child {
+		max-width: 50%;
+	}
+}
+
+.navbar-mobile-close {
+	animation-name: "closeNavbar";
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+
+/* this class is applied when javascript handler modifies the mobile navbar to open */
+.navbar-open {
+	margin: 0;
+	position: absolute;
+	right: 2rem;
+	top: 1rem;
+}
+
+.middle-heading {
+	margin-bottom: 2.5em;
+	padding: 0 8em 0 8em;
+}
+
+/* less horizontal padding for this class on mobile */
+@media (max-width: 390px) {
+	.middle-heading {
+		margin-bottom: 2em;
+		padding: 0 2rem 0 2rem;
+	}
+}
+
+/* less horizontal padding for this class on landscape as well */
+@media (max-width: 844px) and (orientation: landscape) {
+	.middle-heading {
+		margin-bottom: 2.25em;
+		padding: 0 5rem 0 5rem;
+	}
+}
+
+.desktop-heading {
+	/* I want this to be on its own line */
+	color: #5454b2;
+	display: block;
+	font-family: "Quicksand", sans-serif;
+}
+
+/* on mobile displays, this heading will be replaced completely by a call to action button re-directing users to other parts of the website */
+@media (max-width: 390px) {
+	.desktop-heading {
+		display: none;
+	}
+}
+
+/* this class hides the call to action button by default */
+.mobile-cta {
+	display: none;
+}
+
+/* mobile call to action class */
+@media (max-width: 390px) {
+	.mobile-cta {
+		display: block;
+		margin-top: 0.5rem;
+	}
+
+	/* the link that redirects looks like a normal button */
+	.mobile-cta a {
+		background-color: #b25454;
+		border-radius: 0.5rem;
+		border-style: none;
+		color: #fff;
+		font-family: "Poppins", sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		padding: 0.5rem;
+		text-decoration: none;
+	}
+}
+
+.grouped-products {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20rem 0 20rem;
+}
+
+/* changes for this class on mobile will condense it into a 2 x 3 grid for better UX */
+@media (max-width: 390px) {
+	.grouped-products {
+		align-self: center;
+		display: grid;
+		gap: 0.5rem;
+		grid-template-columns: 1fr 1fr;
+		padding: 0;
+	}
+}
+
+/* adjustments to this class are made resulting in a grid on landscape orientations */
+@media (max-width: 844px) and (orientation: landscape) {
+	.grouped-products {
+		align-self: center;
+		display: grid;
+		gap: 0.5rem;
+		grid-template-columns: 1fr 1fr;
+		padding: 0;
+	}
+}
+
+/* these headings will have a unique style to make them stand out */
+.grouped-products h3 {
+	border-color: #5454b2;
+	border-radius: 1rem;
+	border-style: solid;
+	border-width: 0.15rem;
+	color: #5454b2;
+	padding: 1rem;
+}
+
+/* small changes to reflect smaller screen for this class on mobile */
+@media (max-width: 390px) {
+	.grouped-products h3 {
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+	}
+}
+
+/* small changes to reflect smaller screen for this class on landscape */
+@media (max-width: 844px) and (orientation: landscape) {
+	.grouped-products h3 {
+		padding: 0.75rem;
+	}
+}
+
+/* horizontal padding gives pages more breathing room and content looks a lot better */
+.content {
+	font-size: 1.5rem;
+	margin-top: 6em;
+	padding: 0 20rem 0 20rem;
+}
+
+/* this class is responsible for a lot of extra horizontal padding throughout all web pages, so a reset on padding is crucial on mobile */
+@media (max-width: 390px) {
+	.content {
+		font-size: 1rem;
+		margin-top: 2em;
+		padding: 0;
+	}
+}
+
+/* landscape devices have some adjustments to the content class to primarily fix padding issues so content can be properly displayed */
+@media (max-width: 844px) and (orientation: landscape) {
+	.content {
+		font-size: 1.25rem;
+		margin-top: 4em;
+		padding: 0 6rem 0 6rem;
+	}
+}
+
+/* in keeping with responsive design, I am removing the "our store" section of the index page only when on mobile (regardless of orientation). This is because I want users to be more quickly directed to content that they will interact with, instead of breezing over the store-content. Note that I have left the items in the hgroup however, as they are "eye-grabbing" and quickly convey the purpose of the store (to sell products). */
+@media (max-width: 390px) {
+	.store-content {
+		display: none;
+	}
+}
+
+/* removed store content class and content on landscapes as well */
+@media (max-width: 844px) and (orientation: landscape) {
+	.store-content {
+		display: none;
+	}
+}
+
+.content > p {
+	margin: 2rem 0 2rem 0;
+}
+
+@media (max-width: 390px) {
+	.content > p {
+		margin: 1rem 0 1rem 0;
+	}
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.content > p {
+		margin: 1.5rem 0 1.5rem 0;
+	}
+}
+
+.content a {
+	color: #b25454;
+}
+
+.float-left {
+	/* used to float image on about us page */
+	float: left;
+	margin-right: 4rem;
+	max-width: 60%;
+}
+
+/* removed float on mobile displays so content can be read easier top to bottom */
+@media (max-width: 390px) {
+	.float-left {
+		float: none;
+		margin-right: 0;
+		margin-top: 1rem;
+		max-width: 100%;
+	}
+}
+
+/* removed float for landscape devices */
+@media (max-width: 844px) and (orientation: landscape) {
+	.float-left {
+		float: none;
+		margin-right: 0;
+		margin-top: 1rem;
+		max-width: 100%;
+	}
+}
+
+.float-left-text {
+	margin-top: 4rem;
+	text-align: left;
+}
+
+/* fixed some margin for mobile devices */
+@media (max-width: 390px) {
+	.float-left-text {
+		margin-top: 2rem;
+	}
+}
+
+/* fixed some margin for landscape screens */
+@media (max-width: 844px) and (orientation: landscape) {
+	.float-left-text {
+		margin-top: 3rem;
+	}
+}
+
+address,
+.mini-text {
+	color: #ddd;
+	font-family: "Quicksand", sans-serif;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.our-newest-products {
+	display: flex;
+	gap: 4rem;
+}
+
+/* changes made for our-newest-products class on mobile changing to grid that shows smaller items in two column display */
+@media (max-width: 390px) {
+	.our-newest-products {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(2, 1fr);
+		/* making sure that the grid tracks for this class are limited by height and width so the cards will fit nicely on mobile */
+		grid-template-rows: repeat(2, minmax(50%, 12rem));
+	}
+}
+
+/* changes made for our-newest-products class on landscape changing to grid that shows smaller items in two column display */
+@media (max-width: 844px) and (orientation: landscape) {
+	.our-newest-products {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+	}
+}
+
+.product-of-the-week {
+	column-gap: 4rem;
+	/* grid will be very handy for this layout (I could have used a float but grid is much easier to work with) */
+	display: grid;
+	grid-template-areas: "image image details";
+	grid-template-columns: repeat(3, 1fr);
+	text-align: left;
+}
+
+/* changing the grid on mobile so it can stack content vertically */
+@media (max-width: 390px) {
+	.product-of-the-week {
+		grid-template-areas: "image" "details";
+		grid-template-columns: none;
+		/* make sure the image fits nicely in the grid according the the image siz */
+		grid-template-rows: min-content, 1fr;
+	}
+}
+
+/* changing the grid on landscape orientation so it can stack content vertically */
+@media (max-width: 844px) and (orientation: landscape) {
+	.product-of-the-week {
+		grid-template-areas: "image" "details";
+		grid-template-columns: 1fr;
+		/* make sure the image fits nicely in the grid according the the image siz */
+		grid-template-rows: min-content, 1fr;
+		padding: 0 6rem 0 6rem;
+	}
+}
+
+.product-of-the-week-image {
+	grid-area: image;
+}
+
+/* giving the image some padding on mobile so its not as large and obstructive on the product page */
+@media (max-width: 390px) {
+	.product-of-the-week-image {
+		padding-bottom: 2rem;
+	}
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.product-of-the-week-image {
+		padding-bottom: 1rem;
+	}
+}
+
+.product-of-the-week-image img {
+	max-width: 100%;
+	min-height: 100%;
+	/* don't want the image to looked stretched, so i'll set this to cover */
+	object-fit: cover;
+}
+
+.product-details {
+	display: flex;
+	flex-direction: column;
+	grid-area: details;
+	row-gap: 1rem;
+}
+
+.product-cart {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
+
+.product-cart button {
+	background-color: #54b254;
+	width: max-content;
+}
+
+.product-cart button:hover {
+	color: #222;
+}
+
+.bullet-list li {
+	list-style-type: disc;
+	margin-left: 2.5rem;
+}
+
+.bullet-list li a {
+	text-decoration: underline;
+}
+
+/* used for "skip to main content" button (done for accessability) */
+.skip {
+	color: #fff;
+	left: -100rem;
+	position: absolute;
+}
+
+/* "skip to main content" needs to be visible when in focus */
+.skip :focus {
+	left: 50%;
+}
+
+.contact-container {
+	display: grid;
+	padding: 0 10rem 0 10rem;
+}
+
+/* need to reset padding for the main container on the contact us page on mobile so it doesn't overflow */
+@media (max-width: 390px) {
+	.contact-container {
+		padding: 0;
+	}
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.contact-container {
+		padding: 0;
+	}
+}
+
+.contact-form {
+	background-color: #fff;
+	border-radius: 5rem 1rem 5rem 1rem;
+	color: #191935;
+	display: grid;
+	font-size: 1.25rem;
+	gap: 2rem;
+	justify-self: center;
+	padding: 4rem;
+	/* gives good horizontal room for the form and allow for inputs to be not too big or too small for better UX */
+	width: 50%;
+}
+
+/* mobile devices will have a more uniform contact form that fits the screen much better by adjusting these properties */
+@media (max-width: 390px) {
+	.contact-form {
+		border-radius: 3rem 1rem 3rem 1rem;
+		font-size: 1rem;
+		padding: 2rem;
+		width: 100%;
+	}
+}
+
+/* some changes to styles for the contact form on landscape orientation for better UI */
+@media (max-width: 844px) and (orientation: landscape) {
+	.contact-form {
+		font-size: 1rem;
+		gap: 1.5rem;
+		padding: 3rem;
+		width: 75%;
+	}
+}
+
+.contact-form-flex {
+	align-items: center;
+	display: flex;
+	/* having this position will allow me to use pseudo elements for extra styling on input fields */
+	position: relative;
+}
+
+/* on mobile, change the contact form to be column for better UI */
+@media (max-width: 390px) {
+	.contact-form-flex {
+		flex-direction: column;
+	}
+}
+
+/* this class makes all required input fields on the contact us page have the word visually tied to the input field. Its for extra UI. Note that in the HTML each input has a label, so these pseudo elements are not to replace, but rather compliment. */
+.required-input::before {
+	background: #fff;
+	color: #222;
+	content: "* Required";
+	font-size: 0.75rem;
+	left: 1rem;
+	padding: 0 0.5rem 0 0.5rem;
+	position: absolute;
+	top: 2rem;
+	z-index: 1;
+}
+
+@media (max-width: 390px) {
+	.required-input::before {
+		top: 1.5rem;
+	}
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.required-input::before {
+		top: 1.5rem;
+	}
+}
+
+.contact-page-text {
+	justify-self: center;
+	/* I want to put this as !important to overwrite margin style for ".content > p" since I don't think this warrants being an id over a class, and I also do not want to re-arrange my css classes just to style a one-off paragraph.*/
+	margin-top: 0 !important;
+	width: 50%;
+}
+
+/* the paragraph needs to be stretched more on mobile so a change to width is made for this class */
+@media (max-width: 390px) {
+	.contact-page-text {
+		width: 100%;
+	}
+}
+
+/* these styles will make sure the contact page input elements are placed and styled correctly */
+.contact-form-flex input,
+.contact-form-flex select {
+	background-color: #fff;
+	border-color: #222;
+	border-radius: 0.5rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	font-size: 1rem;
+	margin-left: auto;
+	padding: 0.5rem;
+	/* this will allow for absolute positioned dynamic icons when dealing with client side validation */
+	position: relative;
+	width: 50%;
+}
+
+/* on mobile, the contact us page needs to change input fields and select elements to take up the entire horizontal width now that its parent is flex-direction: column  */
+@media (max-width: 390px) {
+	.contact-form-flex input,
+	.contact-form-flex select {
+		width: 100%;
+	}
+
+	.contact-form-flex > * {
+		align-self: flex-start;
+		margin: 0;
+	}
+}
+
+.contact-form-comments {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	position: relative;
+}
+
+/* applies to the textarea of the contact page */
+#contact-comments {
+	border-radius: 0.5rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	font-size: 1rem;
+	/* margin-top: 1rem; */
+	padding: 0.5rem;
+}
+
+/* since we will later be applying border color to the textarea via bootstrap classes, we cannot change the border color in the class above because specificity will never trigger valid/invalid border color changes. So, this utility class is used instead. */
+.contact-border-comments {
+	border-color: #222;
+}
+
+.contact-form-consent {
+	font-size: 1rem;
+}
+
+/* applied to certain buttons to override bootstrap styles */
+.contact-submit,
+.add-to-cart {
+	font-size: 1rem;
+	justify-self: center;
+	margin-top: 1rem;
+	padding: 1rem;
+	width: fit-content;
+}
+
+/* specifically apply to elements that are disabled */
+.disabled {
+	background-color: #aaa;
+}
+
+/* specifically apply to elements that are disabled when hovered */
+.disabled:hover {
+	cursor: default;
+	background-color: #aaa;
+}
+
+/* grid set up to organize the cart where items take about the first 2/3 of space, and the cost can be a column on the right-side */
+.checkout {
+	display: grid;
+	gap: 2rem;
+	grid-template-areas:
+		"item-count item-count"
+		"first-item cost"
+		"second-item cost"
+		"third-item cost";
+	grid-template-columns: 2fr repeat(1, 1fr);
+	grid-template-rows: auto;
+}
+
+/* on mobile displays, the grid needs to be re-arranged to be vertical -- this also includes a reset on padding so everything fits on mobile displays */
+@media (max-width: 390px) {
+	.checkout {
+		grid-template-areas:
+			"item-count"
+			"first-item"
+			"second-item"
+			"third-item"
+			"cost";
+		grid-template-columns: 1fr;
+		padding: 0;
+	}
+}
+
+/* landscape orientations now have just two columns, and a grid row track will be shared between item and cost. This change is needed to make reading the order summary easier for users. */
+@media (max-width: 844px) and (orientation: landscape) {
+	.checkout {
+		gap: 2rem;
+		grid-template-areas:
+			"item-count item-count"
+			"first-item cost"
+			"second-item cost"
+			"third-item cost";
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 2rem 0 2rem;
+	}
+}
+
+/* each inner box in the checkout grid should have these properties for styling */
+.checkout-box {
+	background-color: #fff;
+	border-radius: 5rem 1rem 5rem 1rem;
+	color: #191935;
+	padding: 2rem;
+	text-align: left;
+}
+
+/* small adjustments to make things look better on mobile */
+@media (max-width: 390px) {
+	.checkout-box {
+		border-radius: 3rem 1rem 3rem 1rem;
+		padding: 1rem;
+	}
+}
+
+/* small adjustments to make things look better on landscape orientation*/
+@media (max-width: 844px) and (orientation: landscape) {
+	.checkout-box {
+		padding: 2rem;
+	}
+}
+
+/* used to visually separate the title and remove button for each item in the cart */
+.item-checkout-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item-placement {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.item-placement {
+		padding: 1.5rem;
+	}
+}
+
+.item-count {
+	grid-area: item-count;
+}
+
+.cost {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.25rem;
+	gap: 1rem;
+	grid-area: cost;
+	/* override height from .checkout-box so this looks more natural and not forced to grid size */
+	height: fit-content;
+	padding: 2rem;
+}
+
+@media (max-width: 390px) {
+	.cost {
+		font-size: 1rem;
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.cost {
+		font-size: 1rem;
+		padding: 2rem;
+	}
+}
+
+.item-info-outer {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.item-info-outer {
+		gap: 1rem;
+	}
+}
+
+.item-info-inner {
+	align-items: center;
+	column-gap: 2rem;
+	display: flex;
+}
+
+/* on mobile, the flexbox needs to be vertical as there is not enough room on portrait displays for this to be horizontal */
+@media (max-width: 390px) {
+	.item-info-inner {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	/* reset margin on mobile to override bootstrap defaults */
+	.item-info-inner * {
+		margin: 0;
+	}
+}
+
+/* landscape orientations will also need this class to be vertical, hence the change to flex-direction: column */
+@media (max-width: 844px) and (orientation: landscape) {
+	.item-info-inner {
+		flex-direction: column;
+		justify-content: space-between;
+		font-size: 1rem;
+	}
+
+	/* reset margin on mobile to override bootstrap defaults */
+	.item-info-inner * {
+		margin: 0;
+	}
+}
+
+.thumbnail {
+	height: 12rem;
+	width: 12rem;
+}
+
+/* small adjustments to the size of images on mobile */
+@media (max-width: 390px) {
+	.thumbnail {
+		height: 10rem;
+		width: 10rem;
+	}
+}
+
+.item-quantity {
+	display: flex;
+}
+
+/* since the parent flexbox of this class has changed flex direction, there needs to be a re-construction of padding so it looks nicer on mobile */
+@media (max-width: 390px) {
+	.item-quantity {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+}
+
+.item-quantity p {
+	align-self: center;
+	margin: 0;
+	padding: 0 1rem 0 1rem;
+}
+
+.checkout-button {
+	background-color: #54b254;
+}
+
+.checkout-button:hover {
+	background-color: #54b254;
+	color: #222;
+}
+
+.additional-costs {
+	display: flex;
+	justify-content: space-between;
+}
+
+.checkout-total {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.back-to-top {
+	background-color: #54b254;
+	border-color: #54b254;
+	border-radius: 0.5rem;
+	border-style: solid;
+	border-width: 0.15rem;
+	bottom: 10%;
+	color: #222;
+	padding: 0.75rem;
+	position: fixed;
+	right: 5%;
+}
+
+/* on mobile the back to top button needs to be slightly adjusted */
+@media (max-width: 390px) {
+	.back-to-top {
+		bottom: 5%;
+	}
+}
+
+.back-to-top:hover {
+	background-color: transparent;
+	color: #54b254;
+}
+
+.payment-options p {
+	font-size: 1rem;
+}
+
+.payment-options i {
+	color: #222;
+	font-size: 2.5rem;
+}
+
+.order-summary {
+	font-size: 1.75rem;
+}
+
+/* Utility Classes */
+
+/* needs to reset bottom margin for specific elements*/
+.last-heading {
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 390px) {
+	.last-heading {
+		margin-bottom: 1rem;
+	}
+}
+
+/* some html pages will need to adjust top margin for the first element that uses the .content class, otherwise there is too much empty space */
+.first-content-section {
+	margin-top: 0;
+}
+
+/* anything that needs to reset the <main> text-align center */
+.text-left {
+	text-align: left;
+}
+
+/* fix element width to fit properly in container */
+.select-fit-content {
+	width: fit-content;
+}
+
+/* need a special class for landscape viewport for the cart to reset padding, as it needs more room to display cart info */
+@media (max-width: 844px) and (orientation: landscape) {
+	.cart-content-padding {
+		padding: 0;
+	}
+}
+
+/* for search and filter buttons, as specific buttons should do certain actions and thus share similar styles */
+.input-action-button {
+	border-color: #222;
+	border-radius: 0 0.25rem 0.25rem 0;
+	border-style: solid;
+	border-width: 0.1rem;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	display: inline-flex;
+}
+
+/* used for searchbar and filter input fields on products page */
+.input-action {
+	background-color: #fff;
+	border-color: #222;
+	border-radius: 0.25rem 0 0 0.25rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	color: #222;
+	font-family: "Poppins", sans-serif;
+}
+
+/* used to color placeholder and text in contact us page for extra UX if invalid */
+.placeholder-text-invalid::placeholder {
+	color: red;
+}
+
+/* used to color placeholder text and actual text in contact us page for extra UX if valid */
+.placeholder-text-valid::placeholder,
+.text-valid {
+	color: green;
+}
+
+/* utility class used to show text by default (used for validation feedback) */
+.show-terms {
+	display: inline;
+}
+
+/* utility class used to hide text by default (used for validation feedback) */
+.hide-terms {
+	display: none;
+}
+
+/* Animations */
+
+/* this animation is used on mobile to have the navbar come in from the left side */
+@keyframes openNavbar {
+	from {
+		/* off screen */
+		transform: translateX(-100%);
+	}
+	to {
+		/* on screen */
+		transform: translateX(0);
+	}
+}
+
+/* this animation is used on mobile to have the navbar close and slide off screen towards the left side */
+@keyframes closeNavbar {
+	from {
+		/* on screen */
+		transform: translateX(0);
+	}
+	to {
+		/* off screen */
+		transform: translateX(-100%);
+	}
+}

@@ -1,0 +1,265 @@
+<!--
+  -- Student Name: Paul McJannet
+  -- Student ID: 41171723
+  -- Course: CST8117 - Cross-Platform Web Design
+  -- Semester: Fall 2024
+  -- Assignment: 4 - Online Store
+  -- Date Submitted: Nov 24, 2024
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Products</title>
+		<!-- meta data -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="language"
+			content="en" />
+		<!-- jQuery CDN comes from the following url: https://cdnjs.com/libraries/jquery -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- Bootstrap CSS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous" />
+		<!-- Bootstrap JS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+		<!-- Font Awesome Solid + Brands downloaded from the following url: https://docs.fontawesome.com/web/setup/host-yourself/webfonts-->
+		<link
+			href="./assets/css/fontawesome.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/brands.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/solid.css"
+			rel="stylesheet" />
+		<!-- Local CSS stylesheets -->
+		<link
+			rel="stylesheet"
+			href="assets/products.css" />
+		<link
+			rel="stylesheet"
+			href="assets/main.css" />
+	</head>
+	<body>
+		<!-- Skip to main content for accessibility -->
+		<a
+			href="#main"
+			class="skip"
+			>Skip to main content</a
+		>
+		<header>
+			<section>
+				<h1>
+					<a href="./index.htm"
+						>The Magic: the Gathering Store</a
+					>
+				</h1>
+				<address>mcja0008@algonquinlive.com</address>
+			</section>
+			<!-- START: Navigation menu-->
+			<nav>
+				<ul class="navbar">
+					<div id="navbar-close">
+						<i class="fa-solid fa-rectangle-xmark"></i>
+					</div>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+					<li>
+						<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+						<form
+							action=""
+							class="input-group">
+							<input
+								type="search"
+								id="search"
+								class="form-control input-action"
+								placeholder="search..." />
+							<div class="input-group-prepend">
+								<label
+									hidden
+									for="search"
+									>Search
+								</label>
+								<button
+									title="Search"
+									class="input-action-button"
+									type="submit">
+									<i
+										class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</form>
+					</li>
+				</ul>
+				<div id="hamburger">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+			</nav>
+			<!-- END: Navigation menu-->
+		</header>
+		<main id="main">
+			<section class="content first-content-section">
+				<h2 class="last-heading">Products</h2>
+				<section class="outer-options-menu">
+					<div>
+						<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<label
+									class="input-group-text select-dropdown-label"
+									for="sorting"
+									>Sort by</label
+								>
+							</div>
+							<select
+								class="custom-select select-dropdown"
+								id="sorting">
+								<option value="price-asc">
+									Price (low to high)
+								</option>
+								<option value="price-desc">
+									Price (high to low)
+								</option>
+								<option value="name-asc">
+									Name (alphabetically)
+								</option>
+								<option value="name-desc">
+									Name (reverse alphabetically)
+								</option>
+							</select>
+						</div>
+					</div>
+					<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+					<div>
+						<form
+							action=""
+							class="input-group">
+							<input
+								type="text"
+								id="filter"
+								class="form-control input-action"
+								placeholder="filter by keyword" />
+							<div class="input-group-prepend">
+								<label
+									hidden
+									for="filter"
+									>Filter
+								</label>
+								<button
+									title="Filter"
+									class="input-action-button"
+									type="submit">
+									<i class="fa-solid fa-filter"></i>
+								</button>
+							</div>
+						</form>
+					</div>
+				</section>
+				<section class="display-products">
+					<div class="card">
+						<img
+							title="stock card box"
+							src="./images/pexels-mockupbee-221716013-12039676.jpg"
+							alt="a small white box used for storing away trading cards" />
+						<p class="card-title">Storage Boxes</p>
+						<p class="mini-text">$4.49</p>
+					</div>
+					<div class="card">
+						<img
+							title="basic Magic: the Gathering land cards"
+							src="./images/ryan-quintal-Vp8RnXSnJ6I-unsplash.jpg"
+							alt="all five basic Magic: the Gathering land cards fanned out" />
+						<p class="card-title">Basic Lands</p>
+						<p class="mini-text">$0.50 (ea.)</p>
+					</div>
+					<div class="card">
+						<img
+							title="card sleeves"
+							src="./images/business-card-4275118_1280.jpg"
+							alt="two piles of white card sleeves" />
+						<p class="card-title">Card Sleeves</p>
+						<p class="mini-text">$12.00</p>
+					</div>
+					<div class="card">
+						<img
+							title="20-sided dice"
+							src="./images/pexels-stephen-hardy-32566714-7394683.jpg"
+							alt="a black 20-sided die with red engraving" />
+						<p class="card-title">20-sided Dice</p>
+						<p class="mini-text">$0.99 (ea.)</p>
+					</div>
+					<div class="card">
+						<img
+							title="new thick 100 page binder"
+							src="./images/office-933306_1280.jpg"
+							alt="a purple, orange and red binder on a wooden shelf" />
+						<p class="card-title">100 Page Binders</p>
+						<p class="mini-text">$15.50</p>
+					</div>
+					<div class="card">
+						<img
+							title="new 6-sided mini dice"
+							src="./images/pexels-pixabay-37534.jpg"
+							alt="several white colored mini 6-sided dice" />
+						<p class="card-title">Mini Dice</p>
+						<p class="mini-text">$3.99 (6 pk)</p>
+					</div>
+				</section>
+				<section class="pagination">
+					<!-- these are temporary placeholders, no functionality yet! -->
+					<button title="Previous Page">Prev</button>
+					<button title="Page 1">1</button>
+					<button title="Page 2">2</button>
+					<button title="Page 3">3</button>
+					<button title="Next Page">Next</button>
+				</section>
+			</section>
+			<!-- Back to top button -->
+			<a
+				class="back-to-top"
+				href="#">
+				<i class="fa-solid fa-arrow-up"></i>
+			</a>
+		</main>
+		<!-- START: Footer; more links will be displayed for extra site navigation-->
+		<footer>
+			<div>
+				<ul>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div>
+				<p class="mini-text">&copy;Paul McJannet | 2024</p>
+			</div>
+		</footer>
+		<!-- END: Footer -->
+		<!-- Need to include this script for hamburger button to work properly and show nav menu for mobile devices -->
+		<script src="./assets/hamburger.js"></script>
+	</body>
+</html>

@@ -1,0 +1,165 @@
+/*
+ * Student Name: Paul McJannet
+ * Student ID: 41171723
+ * Course: CST8117 - Cross-Platform Web Design
+ * Semester: Fall 2024
+ * Assignment: 4 - Online Store
+ * Date Submitted: Nov 24, 2024
+ */
+
+/* Regarding project media queries, I have decided to check for mobile devices at a breakpoint of max-width: 390px as this is the breakpoint for an iPhone 13 (which is a common enough model of phone user's might have). Additionally, I am making landscape orientation breakpoint of max-width: 844px for the same reason.*/
+
+/* this card helps to make all relevant info for a single product fit together, and does this with the help of flexbox and also a border to visually tie it all together*/
+.card {
+	background-color: #b25454;
+	border-radius: 5rem 1rem 5rem 1rem;
+	border-style: none;
+}
+
+/* mobile displays will change the border slightly as it looks neater on smaller screens with this adjustment */
+@media (max-width: 390px) {
+	.card {
+		border-radius: 3rem 1rem 3rem 1rem;
+	}
+}
+
+/* Enhanced UI with this added style */
+.card:hover {
+	background: #7c3a3a;
+	box-shadow: 1rem 1rem 1rem #000;
+	cursor: pointer;
+}
+
+/* I specifically wanted to avoid the default size listed for images (which I ruled at the top of this file) because I want them to be more square and not rectangular */
+.card > img {
+	height: 25rem;
+	width: 35rem;
+}
+
+/* on mobile, a lot needs to be done to the images in the card class so that it doesn't overflow its container, or the page its on. I also updated the object-fit so the image doesn't look squished. */
+@media (max-width: 390px) {
+	.card > img {
+		border-radius: 3rem 1rem 3rem 1rem;
+		max-height: 70%;
+		/* don't want the image to looked stretched, so i'll set this to cover */
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+
+/* changes to the image of the card class are made for landscape orientations as well */
+@media (max-width: 844px) and (orientation: landscape) {
+	.card > img {
+		height: 15rem;
+		max-width: 100%;
+	}
+}
+
+.card > p {
+	color: #fff;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-top: 0rem;
+}
+
+@media (max-width: 390px) {
+	.card > p {
+		margin: 0;
+	}
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+	.card > p {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		margin-top: 0.5rem;
+	}
+}
+
+.card-title {
+	font-weight: bold;
+}
+
+/* styles the sort and filter bars on the products page */
+.outer-options-menu {
+	display: grid;
+	gap: 1rem;
+	justify-content: start;
+}
+
+/* the main display of products will be a 3x2 grid (showing 6 products) */
+.display-products {
+	display: grid;
+	gap: 3rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin-bottom: 6rem;
+	margin-top: 2rem;
+}
+
+/* on mobile, a change to the grid layout is necessary to adequately show the products in two grid columns instead of 3 as this fits better with responsive design on smaller screens */
+@media (max-width: 390px) {
+	.display-products {
+		gap: 2rem;
+		grid-template-columns: repeat(2, 1fr);
+		/* making sure that the grid tracks for this class are limited by height and width so the cards will fit nicely on mobile */
+		grid-template-rows: repeat(3, minmax(50%, 12rem));
+	}
+}
+
+/* landscape orientation will change the grid to have 2 columns instead of 3 to better fit on the viewport */
+@media (max-width: 844px) and (orientation: landscape) {
+	.display-products {
+		gap: 2rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+}
+
+/* Apply similar styles to all contained labels in bootstrap select elements to match theme of website */
+.select-dropdown-label {
+	background-color: #5454b2;
+	border-color: #222;
+	border-radius: 0.25rem 0 0 0.25rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+}
+
+/* override some bootstrap styles for input fields */
+.select-dropdown {
+	background-color: #fff;
+	border-color: #222;
+	border-radius: 0 0.25rem 0.25rem 0;
+	border-style: solid;
+	border-width: 0.1rem;
+	color: #222;
+	font-family: "Poppins", sans-serif;
+}
+
+/* slight changes to override bootstrap for this element */
+.quantity-dropdown {
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	padding: 0.25rem;
+}
+
+/* this class will style the way the pagination buttons are organized */
+.pagination {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.pagination button {
+	font-size: 1rem;
+	min-width: 5rem;
+}
+
+/* buttons need updates to look fuller on mobile */
+@media (max-width: 390px) {
+	.pagination button {
+		max-width: 4rem;
+		min-width: 3rem;
+	}
+}

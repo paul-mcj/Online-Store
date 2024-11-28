@@ -1,0 +1,227 @@
+<!--
+  -- Student Name: Paul McJannet
+  -- Student ID: 41171723
+  -- Course: CST8117 - Cross-Platform Web Design
+  -- Semester: Fall 2024
+  -- Assignment: 4 - Online Store
+  -- Date Submitted: Nov 24, 2024
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product</title>
+		<!-- meta data -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="language"
+			content="en" />
+		<!-- jQuery CDN comes from the following url: https://cdnjs.com/libraries/jquery -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- Bootstrap CSS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous" />
+		<!-- Bootstrap JS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+		<!-- Font Awesome Solid + Brands downloaded from the following url: https://docs.fontawesome.com/web/setup/host-yourself/webfonts-->
+		<link
+			href="./assets/css/fontawesome.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/brands.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/solid.css"
+			rel="stylesheet" />
+		<!-- Local CSS stylesheets -->
+		<link
+			rel="stylesheet"
+			href="assets/products.css" />
+		<link
+			rel="stylesheet"
+			href="assets/main.css" />
+	</head>
+	<body>
+		<!-- Skip to main content for accessibility -->
+		<a
+			href="#main"
+			class="skip"
+			>Skip to main content</a
+		>
+		<header>
+			<section>
+				<h1>
+					<a href="./index.htm"
+						>The Magic: the Gathering Store</a
+					>
+				</h1>
+				<address>mcja0008@algonquinlive.com</address>
+			</section>
+			<!-- START: Navigation menu-->
+			<nav>
+				<ul class="navbar">
+					<div id="navbar-close">
+						<i class="fa-solid fa-rectangle-xmark"></i>
+					</div>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+					<li>
+						<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+						<form
+							action=""
+							class="input-group">
+							<input
+								type="search"
+								id="search"
+								class="form-control input-action"
+								placeholder="search..." />
+							<div class="input-group-prepend">
+								<label
+									hidden
+									for="search"
+									>Search
+								</label>
+								<button
+									title="Search"
+									class="input-action-button"
+									type="submit">
+									<i
+										class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</form>
+					</li>
+				</ul>
+				<div id="hamburger">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+			</nav>
+			<!-- END: Navigation menu-->
+		</header>
+		<main id="main">
+			<section class="content first-content-section">
+				<h2 class="last-heading">Product of the Week</h2>
+				<section class="product-of-the-week">
+					<div class="product-of-the-week-image">
+						<img
+							title="newest arrival: Pokemon cards!"
+							src="./images/giorgio-trovato-5bnUnmmQlsc-unsplash.jpg"
+							alt="A booster pack of pokemon playing cards on a wooden table" />
+					</div>
+					<div class="product-details">
+						<h3>
+							Pok&eacute;mon "Evolving Skies" Booster Pack
+						</h3>
+						<p>
+							We are now pleased to announce that we have
+							Pok&eacute;mon cards in stock! Grab a hold of
+							the "Evolving Skies" booster pack that
+							contains 10 brand new cards:
+						</p>
+						<ul class="bullet-list">
+							<li>4 commons</li>
+							<li>3 uncommons</li>
+							<li>3 foils</li>
+							<li>1 rare or higher guaranteed</li>
+						</ul>
+						<hr />
+						<div class="product-cart">
+							<p><strong>$6.99</strong></p>
+
+							<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<label
+										class="input-group-text select-dropdown-label"
+										for="quantity"
+										>Quantity</label
+									>
+								</div>
+								<select
+									class="select-dropdown quantity-dropdown"
+									name="quantity"
+									id="quantity">
+									<option
+										value="1"
+										selected>
+										1
+									</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+								</select>
+							</div>
+							<button
+								id="add-to-cart"
+								class="add-to-cart"
+								title="Add to Cart">
+								<i
+									class="fa-solid fa-cart-shopping"></i>
+								Add to Cart
+							</button>
+							<p class="mini-text">
+								**Due to limited quantities, please
+								<a href="./contact-us.htm"
+									>send us a message</a
+								>
+								for a custom order if you wish to
+								purchase more than 8 packs.
+							</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<!-- Back to top button -->
+			<a
+				class="back-to-top"
+				href="#">
+				<i class="fa-solid fa-arrow-up"></i>
+			</a>
+		</main>
+		<!-- START: Footer; more links will be displayed for extra site navigation-->
+		<footer>
+			<div>
+				<ul>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div>
+				<p class="mini-text">&copy;Paul McJannet | 2024</p>
+			</div>
+		</footer>
+		<!-- END: Footer -->
+		<!-- Need to include this script for hamburger button to work properly and show nav menu for mobile devices -->
+		<script src="./assets/hamburger.js"></script>
+		<!-- Need to include this script for interactivity -->
+		<script src="./assets/product.js"></script>
+	</body>
+</html>

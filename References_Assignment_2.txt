@@ -1,0 +1,60 @@
+References
+
+
+Antonelli, D. (2024, April 5). How to Use Google Fonts in CSS: Importing Google Fonts to CSS Files. WikiHowTech. https://www.wikihow.com/Use-Google-Fonts-in-CSS
+
+Color-hex. (n.d.). #5452b2 Color Hex. Color-hex. https://www.color-hex.com/color/5454b2
+
+Coyier, C. (2024, August 12). CSS Flexbox Layout Guide. CSS Tricks. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Font Awesome. (n.d.). Host Yourself - Web Fonts. Font Awesome. https://docs.fontawesome.com/web/setup/host-yourself/webfonts
+
+FreeCodeCamp. (2022, July 20). How to Add a “Skip to Main Content” Link to Your Website. freeCodeCamp. https://www.freecodecamp.org/news/how-to-add-skip-to-main-content-links-to-a-website/
+
+House, C. (2024, September 26). CSS Grid Layout Guide. CSS Tricks. https://css-tricks.com/snippets/css/complete-guide-grid/
+
+London Image Institute. (n.d). Color Psychology: How Do Colors Affect Mood & Emotions?. London Image Institute. https://londonimageinstitute.com/how-to-empower-yourself-with-color-psychology/
+
+MDN Web Docs. (2023, February 21). Border-bottom. MDN. https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom
+
+MDN Web Docs. (2024, August 13). Box-shadow. MDN. https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+
+MDN Web Docs. (2024, October 11). <select>: The HTML Select element. MDN. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+
+MDN Web Docs. (2024, October 16). <img>: The Image Embed element. MDN. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+
+Microsoft. (2024). *Visual Studio Code* (Version 1.94.2) [Computer software]. https://code.visualstudio.com/
+
+Moneris. (n.d.). Sample Terms of Use. Moneris. https://developer.moneris.com/More/Compliance/Sample%20Terms%20of%20Use
+
+Termly. (n.d.). Website Privacy Policy Template [Text Format]. Termly. https://termly.io/html_document/website-privacy-policy-template-text-format/
+
+W3Schools. (n.d.). CSS calc() Function. W3Schools. https://www.w3schools.com/cssref/func_calc.php
+
+
+
+
+
+
+Images
+
+
+Abdouj. (2019, June 15). Free Business Card Mockup photo and picture [Photograph]. Pixabay. https://pixabay.com/photos/business-card-mockup-business-4275118/
+
+Gese, K. (2013, April 6). Magic The Gathering Players [Photograph]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Magic_The_Gathering_players.JPG
+
+Mockupbee. (2022, May 5). White Cardboard Box on White Surface [Photograph]. Pexels. https://www.pexels.com/photo/white-cardboard-box-on-white-surface-12039676/
+
+Pixabay. (2016, January 23). 6 Pieces of Black and White Dice [Photograph]. Pexels.  https://www.pexels.com/photo/6-pieces-of-black-and-white-dice-37534/
+
+Quintal, R. (2020, July 3). Magic The Gathering Collectable Card Game Booster Packs [Photograph]. Unsplash. https://unsplash.com/photos/f-wQWOCHxyc
+
+Quintal, R. (2020, July 3). Magic The Gathering Collectable Card Game Foil Mana [Photograph]. Unsplash. https://unsplash.com/photos/4-ps-4-game-cases-Vp8RnXSnJ6I
+
+Splash of Rain. (2015, July 2). Parliament Hill [Photograph]. Pexels. https://www.pexels.com/photo/building-architecture-historical-tower-7328/
+
+Tookapic. (2015, October 12). Free Office Binders photo and picture [Photograph]. Pixabay. https://pixabay.com/photos/office-binders-colorful-folders-933306/
+
+Trovato, G. (2022, October 20). A bag of candy on a table [Photograph]. Unsplash. https://unsplash.com/photos/a-bag-of-candy-on-a-table-5bnUnmmQlsc
+
+

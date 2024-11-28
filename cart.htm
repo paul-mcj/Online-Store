@@ -1,0 +1,363 @@
+<!--
+  -- Student Name: Paul McJannet
+  -- Student ID: 41171723
+  -- Course: CST8117 - Cross-Platform Web Design
+  -- Semester: Fall 2024
+  -- Assignment: 4 - Online Store
+  -- Date Submitted: Nov 24, 2024
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cart</title>
+		<!-- meta data -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="language"
+			content="en" />
+		<!-- jQuery CDN comes from the following url: https://cdnjs.com/libraries/jquery -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- Bootstrap CSS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous" />
+		<!-- Bootstrap JS CDN comes from the following url: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+		<!-- Font Awesome Solid + Brands downloaded from the following url: https://docs.fontawesome.com/web/setup/host-yourself/webfonts-->
+		<link
+			href="./assets/css/fontawesome.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/brands.css"
+			rel="stylesheet" />
+		<link
+			href="./assets/css/solid.css"
+			rel="stylesheet" />
+		<!-- Local CSS stylesheets -->
+		<link
+			rel="stylesheet"
+			href="assets/products.css" />
+		<link
+			rel="stylesheet"
+			href="assets/main.css" />
+	</head>
+	<body>
+		<!-- Skip to main content for accessibility -->
+		<a
+			href="#main"
+			class="skip"
+			>Skip to main content</a
+		>
+		<header>
+			<section>
+				<h1>
+					<a href="./index.htm"
+						>The Magic: the Gathering Store</a
+					>
+				</h1>
+				<address>mcja0008@algonquinlive.com</address>
+			</section>
+			<!-- START: Navigation menu-->
+			<nav>
+				<ul class="navbar">
+					<div id="navbar-close">
+						<i class="fa-solid fa-rectangle-xmark"></i>
+					</div>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+					<li>
+						<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+						<form
+							action=""
+							class="input-group">
+							<input
+								type="search"
+								id="search"
+								class="form-control input-action"
+								placeholder="search..." />
+							<div class="input-group-prepend">
+								<label
+									hidden
+									for="search"
+									>Search
+								</label>
+								<button
+									title="Search"
+									class="input-action-button"
+									type="submit">
+									<i
+										class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</form>
+					</li>
+				</ul>
+				<div id="hamburger">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+			</nav>
+			<!-- END: Navigation menu-->
+		</header>
+		<main id="main">
+			<section
+				class="content first-content-section cart-content-padding">
+				<h2 class="last-heading">Your Cart</h2>
+				<section class="checkout">
+					<p class="item-count text-left">
+						Total Item(s):
+						<span id="total-items-in-cart">7</span>
+					</p>
+					<!-- first item -->
+					<section
+						class="first-item checkout-box item-placement">
+						<p class="item-checkout-title">
+							<strong>Mini Dice</strong>
+							<button
+								title="remove from cart"
+								id="remove-dice">
+								<i class="fa-regular fa-trash-can"></i>
+							</button>
+						</p>
+						<div class="item-info-outer">
+							<img
+								class="thumbnail"
+								title="new 6-sided mini dice"
+								src="./images/pexels-pixabay-37534.jpg"
+								alt="several white colored mini 6-sided dice" />
+							<div class="item-info-inner">
+								<div>
+									<p>Price</p>
+									<p>$3.99</p>
+								</div>
+								<div class="item-quantity">
+									<button
+										title="less"
+										id="dice-less">
+										<i
+											class="fa-solid fa-minus"></i>
+									</button>
+									<p id="dice-amount">1</p>
+									<button
+										title="more"
+										id="dice-more">
+										<i
+											class="fa-solid fa-plus"></i>
+									</button>
+								</div>
+								<div>
+									<p>Total</p>
+									<p id="dice-total">$3.99</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- second item -->
+					<section
+						class="second-item checkout-box item-placement">
+						<p class="item-checkout-title">
+							<strong
+								>Magic: the Gathering Booster
+								Pack</strong
+							>
+							<button
+								title="remove from cart"
+								id="remove-pack">
+								<i class="fa-regular fa-trash-can"></i>
+							</button>
+						</p>
+						<div class="item-info-outer">
+							<img
+								class="thumbnail"
+								title="magic: the gathering core 2021 booster packs"
+								src="./images/ryan-quintal-f-wQWOCHxyc-unsplash.jpg"
+								alt="A picture of three core 2021 Magic: the Gathering booster packs" />
+							<div class="item-info-inner">
+								<div>
+									<p>Price</p>
+									<p>$8.99</p>
+								</div>
+								<div class="item-quantity">
+									<button
+										title="less"
+										id="pack-less">
+										<i
+											class="fa-solid fa-minus"></i>
+									</button>
+									<p id="pack-amount">4</p>
+									<button
+										title="more"
+										id="pack-more">
+										<i
+											class="fa-solid fa-plus"></i>
+									</button>
+								</div>
+								<div>
+									<p>Total</p>
+									<p id="pack-total">$35.96</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- third item -->
+					<section
+						class="third-item checkout-box item-placement">
+						<p class="item-checkout-title">
+							<strong>20-sided Dice</strong>
+							<button
+								title="remove from cart"
+								id="remove-d20">
+								<i class="fa-regular fa-trash-can"></i>
+							</button>
+						</p>
+						<div class="item-info-outer">
+							<img
+								class="thumbnail"
+								title="20-sided dice"
+								src="./images/pexels-stephen-hardy-32566714-7394683.jpg"
+								alt="a black 20-sided die with red engraving" />
+							<div class="item-info-inner">
+								<div>
+									<p>Price</p>
+									<p>$0.99</p>
+								</div>
+								<div class="item-quantity">
+									<button
+										title="less"
+										id="d20-less">
+										<i
+											class="fa-solid fa-minus"></i>
+									</button>
+									<p id="d20-amount">2</p>
+									<button
+										title="more"
+										id="d20-more">
+										<i
+											class="fa-solid fa-plus"></i>
+									</button>
+								</div>
+								<div>
+									<p>Total</p>
+									<p id="d20-total">$1.98</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- I am using some <hr /> elements to breakup the cost sections in the checkout. I think this is much more organized than not having anything.-->
+					<div class="cost checkout-box">
+						<p class="order-summary">
+							<strong
+								><i class="fa-solid fa-receipt"></i>
+								Order Summary</strong
+							>
+						</p>
+						<hr />
+						<div>
+							<!-- from bootstrap select: https://getbootstrap.com/docs/4.0/components/input-group/#custom-forms -->
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<label
+										class="input-group-text select-dropdown-label"
+										for="shipping-option"
+										>Shipping</label
+									>
+								</div>
+								<select
+									class="custom-select select-dropdown"
+									name="shipping"
+									id="shipping-option">
+									<option value="standard">
+										Standard ($0.00)
+									</option>
+									<option
+										value="express"
+										selected>
+										Express ($4.50)
+									</option>
+								</select>
+							</div>
+						</div>
+						<hr />
+						<div class="additional-costs">
+							<p>Subtotal:</p>
+							<p id="subtotal">$41.93</p>
+						</div>
+						<div class="additional-costs">
+							<p>Shipping:</p>
+							<p id="shipping-cost">$4.50</p>
+						</div>
+						<div class="additional-costs">
+							<p>Estimated Tax:</p>
+							<p id="tax">$6.04</p>
+						</div>
+						<hr />
+						<div class="additional-costs checkout-total">
+							<p>Total:</p>
+							<p id="grand-total">$52.47</p>
+						</div>
+						<button
+							class="checkout-button"
+							title="Checkout"
+							id="checkout-button">
+							<i class="fa-solid fa-lock"></i> Checkout
+						</button>
+						<hr />
+						<div class="payment-options">
+							<p>Accepted Payment Options</p>
+							<i class="fa-brands fa-cc-apple-pay"></i>
+							<i class="fa-brands fa-cc-paypal"></i>
+							<i class="fa-brands fa-cc-visa"></i>
+							<i class="fa-brands fa-cc-mastercard"></i>
+						</div>
+					</div>
+				</section>
+			</section>
+			<!-- Back to top button -->
+			<a
+				class="back-to-top"
+				href="#">
+				<i class="fa-solid fa-arrow-up"></i>
+			</a>
+		</main>
+		<!-- START: Footer; more links will be displayed for extra site navigation-->
+		<footer>
+			<div>
+				<ul>
+					<li><a href="./about-us.htm">About Us</a></li>
+					<li><a href="./contact-us.htm">Contact Us</a></li>
+					<li><a href="./products.htm">Products</a></li>
+					<li><a href="./cart.htm">Cart</a></li>
+					<li><a href="./privacy.htm">Privacy Policy</a></li>
+					<li><a href="./terms.htm">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div>
+				<p class="mini-text">&copy;Paul McJannet | 2024</p>
+			</div>
+		</footer>
+		<!-- END: Footer -->
+		<!-- Need to include this script for hamburger button to work properly and show nav menu for mobile devices -->
+		<script src="./assets/hamburger.js"></script>
+		<!-- Need to include this script for client side validation -->
+		<script src="./assets/cart.js"></script>
+	</body>
+</html>
