@@ -12,6 +12,16 @@
 	<head>
 		<title>About Us</title>
 		<!-- meta data -->
+		<meta charset="utf-8" />
+		<meta
+			name="robots"
+			content="index, follow" />
+		<meta
+			name="author"
+			content="Paul McJannet" />
+		<meta
+			name="description"
+			content="Responsive multi-page website that uses vanilla JavaScript, HTML and custom CSS to showcase a fictional store. Complete with cart that updates in real time." />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
@@ -154,6 +164,41 @@
 					</p>
 				</div>
 			</section>
+			<section class="content content-section">
+				<h2>About Me</h2>
+				<div>
+					<p>Hey, I'm Paul!</p>
+					<p>
+						I'm a web developer with a diverse set of skills
+						ranging from frontend design using JavaScript and
+						React, to machine learning with Python.
+					</p>
+					<p>
+						For more info, visit
+						<a
+							href="https://www.paulmcjannet.com/"
+							target="_blank"
+							>my website</a
+						>.
+					</p>
+					<p>
+						You can also see my other projects located on my
+						<a
+							href="https://github.com/paul-mcj/"
+							target="_blank"
+							>GitHub profile</a
+						>.
+					</p>
+					<p>
+						Feel free to
+						<a
+							href="https://www.linkedin.com/in/paul-mcjannet/"
+							target="_blank"
+							>follow me on LinkedIn</a
+						>!
+					</p>
+				</div>
+			</section>
 			<!-- Back to top button -->
 			<a
 				class="back-to-top"
@@ -174,11 +219,16 @@
 				</ul>
 			</div>
 			<div>
-				<p class="mini-text">&copy;Paul McJannet | 2024</p>
+				<p class="mini-text">
+					Copyright &copy;<span id="current-year"></span> Paul
+					McJannet | v1.2 | All Rights Reserved
+				</p>
 			</div>
 		</footer>
 		<!-- END: Footer -->
 		<!-- Need to include this script for hamburger button to work properly and show nav menu for mobile devices -->
 		<script src="./assets/hamburger.js"></script>
+		<!-- Need to include this script for interactivity -->
+		<script src="./assets/current-year.js"></script>
 	</body>
 </html>

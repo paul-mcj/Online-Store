@@ -12,6 +12,16 @@
 	<head>
 		<title>Terms & Conditions</title>
 		<!-- meta data -->
+		<meta charset="utf-8" />
+		<meta
+			name="robots"
+			content="index, follow" />
+		<meta
+			name="author"
+			content="Paul McJannet" />
+		<meta
+			name="description"
+			content="Responsive multi-page website that uses vanilla JavaScript, HTML and custom CSS to showcase a fictional store. Complete with cart that updates in real time." />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
@@ -193,11 +203,16 @@
 				</ul>
 			</div>
 			<div>
-				<p class="mini-text">&copy;Paul McJannet | 2024</p>
+				<p class="mini-text">
+					Copyright &copy;<span id="current-year"></span> Paul
+					McJannet | v1.2 | All Rights Reserved
+				</p>
 			</div>
 		</footer>
 		<!-- END: Footer -->
 		<!-- Need to include this script for hamburger button to work properly and show nav menu for mobile devices -->
 		<script src="./assets/hamburger.js"></script>
+		<!-- Need to include this script for interactivity -->
+		<script src="./assets/current-year.js"></script>
 	</body>
 </html>
