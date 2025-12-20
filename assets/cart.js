@@ -1,12 +1,3 @@
-/*
- * Student Name: Paul McJannet
- * Student ID: 41171723
- * Course: CST8117 - Cross-Platform Web Design
- * Semester: Fall 2024
- * Assignment: 4 - Online Store
- * Date Submitted: Nov 24, 2024
- */
-
 // get all html elements that will need to be used for the cart page
 const cartDiceLess = document.getElementById("dice-less");
 const cartDiceMore = document.getElementById("dice-more");

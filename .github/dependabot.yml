@@ -1,0 +1,23 @@
+# .github/dependabot.yml
+version: 2
+updates:
+     # 1. Keep npm packages up to date (Vite, Prettier, etc.)
+     - package-ecosystem: "npm"
+       directory: "/"
+       schedule:
+            interval: "weekly"
+       # Group updates so you don't get 10 separate PRs
+       groups:
+            dependencies:
+                 patterns:
+                      - "*"
+       open-pull-requests-limit: 5
+       labels:
+            - "dependencies"
+            - "javascript"
+
+     # 2. Keep GitHub Actions up to date (if you use them for Vercel/FTP)
+     - package-ecosystem: "github-actions"
+       directory: "/"
+       schedule:
+            interval: "monthly"

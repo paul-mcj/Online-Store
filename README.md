@@ -1,8 +1,8 @@
-# Online Store (v1.2)
+# Online Store (v1.3)
 
 ## Recent Update: Jan 2025
 
-v1.2 updates a few meta tags, adds versioning in the footer, adds links to
+v1.3 updates a few meta tags, adds versioning in the footer, adds links to
 personal website, githb and linkedin. Also adds attributions for all images.
 
 ## About this project
